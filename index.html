@@ -17,12 +17,16 @@
 	<body id="container" class="container container--nav-hidden">
 		<!-- ! Sidebar -->
 		<div class="sidebar">
-			<div class="sidebar__wrapper">
 					<!-- ! toggle button -->
-			<input type="checkbox" class="sidebar__checkbox" id="navi-toggle" />
-			<label for="navi-toggle"id="sidebar__button" class="sidebar__button">
-				<span id="sidebar__icon" class="sidebar__icon"> </span>
-			</label>
+					<div class="sidebar__toggle-wrapper">
+						<input type="checkbox" class="sidebar__checkbox" id="navi-toggle" />
+						<label for="navi-toggle"id="sidebar__button" class="sidebar__button">
+							<span id="sidebar__icon" class="sidebar__icon"> </span>
+						</label>
+					</div>
+					
+			<div class="sidebar__wrapper">
+			
 
 			<ul id="main-nav" class="nav nav-hidden">
 				
@@ -138,7 +142,7 @@
 					<use href="./img/sprite.svg#icon-presentation" />
 				</svg>
 
-				<h4 class="heading-4 heading-4--dark">Top 1% realtors</h4>
+				<h4 class="heading-4 heading-4--dark">Top 1% realtors on the planet</h4>
 				<p class="feature-text">
 					Quidem consequatur harum, voluptatum mollitia quae. Tenetur distinctio
 					necessitatibus pariatur voluptatibus.
@@ -404,7 +408,9 @@
 		</section>
 
 		<!-- ! Gallery -->
+		
 		<section class="gallery">
+			
 			<!--emet (figure.gallery__item-gallery__item--$>img.gallery__img[src="img/gal-$.jpeg"][alt="Gallery image $"])*14 -->
 			<figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>
 			<figure class="gallery__item gallery__item--2"><img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img"></figure>
