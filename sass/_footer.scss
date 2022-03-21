@@ -14,7 +14,7 @@
 
 	&__link:link,
 	&__link:visited {
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		color: #fff;
 		text-decoration: none;
 		font-family: $font-display;
@@ -46,7 +46,6 @@
 		display: inline-block;
 		padding: 0.25rem 0.5rem;
 		text-decoration: none;
-		border-bottom: 2px solid transparent;
 		transition: all 0.2s;
 	}
 
