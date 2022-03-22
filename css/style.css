@@ -23,11 +23,9 @@ body {
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   position: relative;
-  transform: translateZ(0);
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1.2);
-  transition-duration: 1s; }
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1.2); }
   .container--nav-visible {
-    grid-template-columns: [sidebar-start] 40rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+    grid-template-columns: [sidebar-start] 29.3rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -114,7 +112,7 @@ body {
   .sidebar__toggle-wrapper {
     position: fixed;
     top: 2rem;
-    left: 1.5rem;
+    left: 0.5rem;
     z-index: 100; }
     @media only screen and (max-width: 62.5em) {
       .sidebar__toggle-wrapper {
@@ -126,8 +124,7 @@ body {
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 40rem; }
+    left: 0; }
     .sidebar__wrapper .nav {
       margin-top: 20rem;
       display: flex;
@@ -135,11 +132,11 @@ body {
       align-items: center;
       justify-content: center;
       transform: translateX(0);
-      transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1.2); }
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1.2); }
       .sidebar__wrapper .nav__link {
         font-size: 2rem; }
     .sidebar__wrapper .nav-hidden {
-      transform: translateX(-200%); }
+      transform: translateX(-100%); }
     @media only screen and (max-width: 62.5em) {
       .sidebar__wrapper {
         flex-direction: row;
@@ -164,6 +161,7 @@ body {
   .sidebar__button {
     height: 5rem;
     margin-top: 2rem;
+    padding: 1rem;
     cursor: pointer; }
     @media only screen and (max-width: 62.5em) {
       .sidebar__button {
@@ -246,7 +244,7 @@ body {
 .header {
   background-color: #54483a;
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url("../img/hero.jpeg");
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg");
   background-size: cover;
   background-position: center;
   padding: 4rem 8rem 8rem;

@@ -61,13 +61,11 @@ body {
 		[center-end] minmax(6rem, 1fr) [full-end];
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 	position: relative;
-	transform: translateZ(0);
-	transition: all cubic-bezier(0.075, 0.82, 0.165, 1.2);
-	transition-duration: 1s;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1.2);
 
 	&--nav-visible {
 		grid-template-columns:
-			[sidebar-start] 40rem [sidebar-end full-start] minmax(6rem, 1fr)
+			[sidebar-start] 29.3rem [sidebar-end full-start] minmax(6rem, 1fr)
 			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 			[center-end] minmax(6rem, 1fr) [full-end];
 	}
