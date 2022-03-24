@@ -56,19 +56,11 @@ body {
 	//row 1 = 80vh, row 2 = min-content, row 3 = 40vw, row 4 - 7 = min-content,
 	//sidebar = 8rem, empty space = 1fr, 8 column grid, empty space = 1fr
 	grid-template-columns:
-		[sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr)
+		[sidebar-start] min-content [sidebar-end full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 	position: relative;
-	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1.2);
-
-	&--nav-visible {
-		grid-template-columns:
-			[sidebar-start] 29.3rem [sidebar-end full-start] minmax(6rem, 1fr)
-			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-			[center-end] minmax(6rem, 1fr) [full-end];
-	}
 
 	// ! media queries
 	@media only screen and (max-width: $bp-large) {
@@ -76,19 +68,11 @@ body {
 			[full-start] minmax(6rem, 1fr)
 			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 			[center-end] minmax(6rem, 1fr) [full-end];
-		grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-
-		&--nav-visible {
-			grid-template-rows: 40rem 80vh min-content 40vw repeat(3, min-content);
-		}
+		grid-template-rows: min-content 80vh min-content 40vw repeat(3, min-content);
 	}
 
 	@media only screen and (max-width: $bp-medium) {
 		//set height only for sidebar and header, others row have min-content
 		grid-template-rows: 6rem calc(100vh - 6rem);
-
-		&--nav-visible {
-			grid-template-rows: min-content calc(100vh - 6rem);
-		}
 	}
 }
