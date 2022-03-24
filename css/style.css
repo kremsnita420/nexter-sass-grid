@@ -58,15 +58,27 @@ body {
 .scroll-top {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 0.5rem;
   cursor: pointer;
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
   transition: all 1s cubic-bezier(0.5, 0.885, 0.32, 1);
   background-color: #b28451;
-  z-index: 1000; }
+  z-index: 1000;
+  opacity: 0.3; }
+  .scroll-top svg {
+    width: 2rem;
+    height: 2rem; }
   .scroll-top:hover {
-    background-color: #cda576; }
+    background-color: #cda576;
+    animation: bounce 1s ease-in-out;
+    opacity: 1; }
+
+@keyframes bounce {
+  10% {
+    transform: translateY(-0.5rem); }
+  0% {
+    transform: translateY(0); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
