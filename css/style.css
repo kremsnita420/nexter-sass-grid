@@ -8,10 +8,34 @@
 html {
   box-sizing: border-box;
   font-size: 68.75%;
-  caret-color: transparent; }
+  caret-color: transparent;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 60%; } }
+
+/* width */
+::-webkit-scrollbar {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f9f7f6; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7c6a55;
+  width: 10rem; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6d5d4b; }
+
+::selection {
+  color: #f9f7f6;
+  background: #7c6a55; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -29,7 +53,20 @@ body {
       grid-template-rows: min-content 80vh min-content 40vw repeat(3, min-content); } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem calc(100vh - 6rem); } }
+      grid-template-rows: min-content calc(100vh - 6rem); } }
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 1s cubic-bezier(0.5, 0.885, 0.32, 1);
+  background-color: #b28451;
+  z-index: 1000; }
+  .scroll-top:hover {
+    background-color: #cda576; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
